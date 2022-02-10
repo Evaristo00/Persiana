@@ -43,7 +43,8 @@ int main (void)
    RCC->APB2ENR |= 0xFC | (1<<14) ; //enable clock for GPIO, USART1
 
 
-   lcd_init();
+ //  lcd_init();
+   LCDinit();
    usart1_init();
    MEF_Init();
    delay_us(1000);

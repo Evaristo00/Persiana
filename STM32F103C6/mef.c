@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "lcd.h"
+#include "lcd4bits.h"
 
 typedef enum {invalido,ingresar_porcentaje} state_name;
 	
@@ -110,8 +110,8 @@ void prepararHora(){
 	stringTime[6] = ((seg/10)% 10) + '0';
 
 	//imprimir la hora en el led
-	lcd_gotoXY(0, 0);
-	lcd_string(stringTime, 8);
+	LCDGotoXY(0, 0);
+	LCDstring(stringTime, 8);
 	
 }
 void actualizarTiempo(){
